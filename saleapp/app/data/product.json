@@ -1,0 +1,87 @@
+[{
+    "id": 1,
+    "name": "Iphone 7 Plus",
+    "description": "The iPhone 7 Plus is the best iPhone yet",
+    "price": 769,
+    "image": "iphone7plus.jpg",
+    "category_id": 1
+},{
+    "id": 2,
+    "name": "Samsung Galaxy S8",
+    "description": "The Samsung Galaxy S8 is the best Android phone",
+    "price": 799,
+    "image": "samsungs8.jpg",
+    "category_id": 1
+},{
+    "id": 3,
+    "name": "Huawei P10",
+    "description": "The Huawei P10 is the best Huawei phone",
+    "price": 649,
+    "image": "huaweip10.jpg",
+    "category_id": 2
+},{
+    "id": 4,
+    "name": "Oppo F1s",
+    "description": "The Oppo F1s is the best Oppo phone",
+    "price": 275,
+    "image": "oppof1s.jpg",
+    "category_id": 2
+},
+{
+    "id": 1,
+    "name": "Iphone 7 Plus",
+    "description": "The iPhone 7 Plus is the best iPhone yet",
+    "price": 769,
+    "image": "iphone7plus.jpg",
+    "category_id": 1
+},{
+    "id": 2,
+    "name": "Samsung Galaxy S8",
+    "description": "The Samsung Galaxy S8 is the best Android phone",
+    "price": 799,
+    "image": "samsungs8.jpg",
+    "category_id": 1
+},{
+    "id": 3,
+    "name": "Huawei P10",
+    "description": "The Huawei P10 is the best Huawei phone",
+    "price": 649,
+    "image": "huaweip10.jpg",
+    "category_id": 2
+},{
+    "id": 4,
+    "name": "Oppo F1s",
+    "description": "The Oppo F1s is the best Oppo phone",
+    "price": 275,
+    "image": "oppof1s.jpg",
+    "category_id": 2
+},
+{
+    "id": 1,
+    "name": "Iphone 7 Plus",
+    "description": "The iPhone 7 Plus is the best iPhone yet",
+    "price": 769,
+    "image": "iphone7plus.jpg",
+    "category_id": 1
+},{
+    "id": 2,
+    "name": "Samsung Galaxy S8",
+    "description": "The Samsung Galaxy S8 is the best Android phone",
+    "price": 799,
+    "image": "samsungs8.jpg",
+    "category_id": 1
+},{
+    "id": 3,
+    "name": "Huawei P10",
+    "description": "The Huawei P10 is the best Huawei phone",
+    "price": 649,
+    "image": "huaweip10.jpg",
+    "category_id": 2
+},{
+    "id": 4,
+    "name": "Oppo F1s",
+    "description": "The Oppo F1s is the best Oppo phone",
+    "price": 275,
+    "image": "oppof1s.jpg",
+    "category_id": 2
+}]
