@@ -1,3 +1,5 @@
+import math
+
 from flask import render_template,request,jsonify,redirect,flash
 from config import app, db
 import dao
@@ -12,8 +14,15 @@ def index():
     cates = dao.load_categories()
     cate_id = request.args.get('category_id')
     kw = request.args.get('kw')
-    prods = dao.load_products(cate_id=cate_id,kw=kw)
-    return render_template('index.html', categories=cates, products=prods)
+    page = request.args.get('page',1)
+    total_page = dao.count_products()
+    page_size = app.config['PAGE_SIZE']
+    prods = dao.load_products(cate_id=cate_id,kw=kw,page=int(page))
+    return render_template('index.html', categories=cates, products=prods,pages = math.ceil(total_page/page_size))
+
+@app.route("/login")
+def login_process():
+    return render_template('login.html')
 @app.route("/api/products/add", methods=['POST'])
 def add_product():
     data = request.get_json()
