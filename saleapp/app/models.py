@@ -72,7 +72,9 @@ if __name__ == '__main__':
     # create_admin_user()
     with app.app_context():
         db.create_all()  # This will create the tables in the database
-        u = User(name="admin",username="admin",password = hashlib.md5('123456'.encode()).hexdigest())
+        u = User(name='adminmain', username='adminmain2',
+                 password=str(hashlib.md5('123456'.encode('utf-8')).hexdigest()),
+                 user_role=UserRole.ADMIN)
         db.session.add(u)
         db.session.commit()
         # Uncomment the following lines to add initial data

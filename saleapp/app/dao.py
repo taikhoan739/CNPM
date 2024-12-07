@@ -1,7 +1,8 @@
+import hashlib
 import json
 from models import Category, Product,User
 from config import login,db,app
-
+from werkzeug.security import check_password_hash
 
 def load_categories():
     return Category.query.order_by("id").all()
@@ -22,17 +23,13 @@ def count_products():
 @login.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
-def add_product(data):
-    name = data.get("name")
-    price = data.get("price")
-    category_id = data.get("category_id")
 
-    new_product = Product(
-        name=name,
-        price=price,
-        category_id=category_id
-    )
-    print(new_product)
-    db.session.add(new_product)
-    db.session.commit()
-    return new_product
+
+
+def auth_user(username,password,role=None):
+    password =str(hashlib.md5(password.strip().encode('utf-8')).hexdigest())
+    u = User.query.filter(User.username.__eq__(username),
+                          password.__eq__(password))
+    if role:
+        u = u.filter(User.user_role.__eq__(role))
+    return u.first()
